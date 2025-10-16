@@ -1,0 +1,55 @@
+.wrap{
+	height: 100vh;
+}
+
+.month-bill{
+	width: 100%;
+}
+
+.monthly-waste {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.monthly-waste th, .monthly-waste td {
+    padding: 8px 12px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.monthly-waste th:last-child,
+.monthly-waste td:last-child {
+    border-right: none;
+}
+
+.monthly-waste th {
+    background-color: rgba(79, 195, 247, 1);
+    color: #fff;
+}
+
+.monthly-waste tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+@media (max-width: 1024px) {
+
+	.inner-wrap{
+		min-height: 450px;
+	}
+
+	.month-bill{
+   		height: auto;
+  	}
+
+  	th, td{
+  		font-size: 14px;
+  	}
+
+
+}

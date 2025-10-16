@@ -1,0 +1,355 @@
+/* DetailPage for User CSS */
+
+.wrap{
+	/*border: 3px solid greenyellow;*/
+	width: 100%;
+	height: auto;
+	padding: 3%;
+	background-image: linear-gradient(135deg, rgba(79, 195, 247, 0.9), rgba(129, 199, 132, 0.9));
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.wrap div:first-child{
+	width: 100%;
+	max-width: 1100px;
+	display: flex;
+}
+
+.logout{
+	margin-right: 2%;
+	margin-top: 26px;
+}
+
+.logout>a{
+	color: #fff;
+}
+
+h1{
+	/*border: 1px solid #000;*/
+	font-family: Montserrat;
+	margin-left: 2%;
+	margin-right: auto;
+	padding: 10px 2%;
+	font-size: 40px;
+	color: #fff;
+	font-weight: 200;
+	max-width: 1100px;
+}
+
+
+/* Inner Wrap */
+
+.inner-wrap{
+	border-radius: 26px;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+	padding: 2% 3%;
+	width: 100%;
+	max-width: 1100px;
+	height: calc(auto - 60px);
+}
+
+
+/* Header */
+
+header{
+	/*border: 1px solid #000;*/
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2% 14px 2%;
+}
+
+h2{
+	color: #2196F3;
+	font-size: 22px;
+}
+
+header p{
+	width: auto;
+	height: 100%;
+	vertical-align: center;
+}
+
+
+/* Floor */
+
+.floor00, .floor01, .floor02, .floor03{
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	padding-bottom: 16px;
+}
+
+
+.today-date{
+	width: 30%;
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  background-color: #fff; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+}
+
+.today-total, .today-bill{
+	width: 34%;
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  background-color: #fff; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+}
+
+
+.floor03{
+	padding: 0 2% 0 2%;
+}
+
+.month-bill{
+	width: 30%;
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  background-color: #fff; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+}
+
+h4{
+	font-size: 24px;
+	font-weight: 200;
+	padding: 0 0 10px 0;
+}
+
+h3{
+	font-size: 22px;
+}
+
+.paid-check{
+	/*border: 1px solid #000;*/
+	padding-bottom: 20px;
+	font-weight: 800;
+	color: #35A8E0;
+}
+
+.paid-lim{
+	padding: 30px 0;
+}
+
+.paid-lim p:first-child{
+	font-size: 20px;
+	color: red;
+	padding-bottom: 12px;
+}
+
+.paid-lim p:nth-child(2){
+	color: #777;
+}
+
+.month-bill button{
+	width: 90%;
+	height: 50px;
+	border: none;
+	border-radius: 10px;
+	background-image: linear-gradient(135deg, rgba(79, 195, 247, 1), rgba(129, 199, 132, 1));
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.month-bill button:hover{
+	opacity: 0.6;
+	transition: 0.4s;
+}
+
+.month-bill a{
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.cumul{
+	width: 30%;
+	height: auto;
+}
+
+.amount{
+	margin-bottom: 16px;
+}
+
+.amount, .billing{
+	width: 100%;
+	height: calc(50% - 8px);
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+}
+
+.billing p{
+	padding-top: 10px;
+}
+
+.billing h3{
+	color:  #4CAF50;
+}
+
+.week-bill, .month-total{
+	/*border: 1px solid tomato;*/
+	border-radius : 20px;
+	width: 70%;
+	padding: 2%;
+	background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+}
+
+.week-chart, .month-chart{
+    width: 100%;
+    min-height: 250px; 
+}
+
+.week-chart canvas, .month-chart canvas {
+	/* chart.js 라이브러리 사이즈조정 */
+    width: 100%;
+    height: 100%; 
+}
+
+
+.floor03 a{
+	color: #666;
+}
+
+/* Footer */
+
+footer{
+	/*border: 1px solid #000;*/
+	margin-top: 30px;
+	width: 100%;
+	max-width: 770px;
+	height: 10%;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.footer-inner{
+	/*border: 1px solid #000;*/
+	width: 60%;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-inner p{
+	padding-bottom: 5px;
+}
+
+
+
+
+/* responsive */
+
+@media (max-width: 1024px) {
+  .inner-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header, .floor00, .floor01, .floor02{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h2{
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  }
+
+  .logout{
+  	margin-right: 3%;
+		margin-top: 14px;
+	}
+
+  .floor03 {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 120px;
+    padding: 0 0 10px 0;
+  }
+
+  .floor03 a{
+  	font-size: 14px;
+  	font-weight: 400;
+  }
+
+  .month-bill, .week-bill, .cumul, .month-total,
+  .today-date, .today-bill, .today-total {
+    width: 100%;
+    max-width: 600px; 
+    margin-bottom: 8px;
+  }
+
+  .month-bill{
+   	height: 350px;
+  }
+
+  .week-chart, .month-chart{
+  	height: 300px;
+  	padding: 2%;
+  }
+
+  .amount{
+  	margin-bottom: 24px;
+  }
+
+  .amount, .billing, .today-date, .today-bill, .today-total{
+  	height: 140px;
+  }
+
+  /* 폰트 조금 축소 */
+  h1 {
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  h2{
+  	font-size: 19px;
+  	font-weight: 500;
+  }
+
+  h4 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  footer {
+    margin-top: 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}

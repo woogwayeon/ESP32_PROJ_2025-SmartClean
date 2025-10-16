@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clean : 전체 납부내역 확인</title>
+    <link rel="stylesheet" href="./style/default.css">
+    <link rel="stylesheet" href="./style/detailPage.css">
+    <link rel="stylesheet" href="./style/paidDetail-manager.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <div>
+            <h1>Smart Clean System : Admin</h1>    
+            <div class="logout">
+                <a href="index.html">Logout</a>
+            </div>
+        </div>
+        <div class="inner-wrap">
+            <header>
+                <h2>세대별 연간 납부내역</h2>
+                <p>전체 관리</p>
+            </header>
+
+            <main>
+                <div class="floor01">
+                    <article class="month-bill">
+                        <div class="year-total">
+                            <label for="yearSelect">연도 선택 : </label>
+                            <select id="yearSelect" class="select-opt">
+                                <option value="2024">2024</option>
+                                <option value="2025" selected>2025</option>
+                            </select>
+                        </div>
+
+                        <table class="monthly-waste">
+                            <thead>
+                                <tr>
+                                    <th>월</th>
+                                    <th>일일 평균(g)</th>
+                                    <th>총 배출량(g)</th>
+                                    <th>총 금액(₩)</th>
+                                    <th>납부 상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JS에서 생성 -->
+                            </tbody>
+                            <tfoot>
+                                <tr class="total-row">
+                                    <td>총합</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>-</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </article>
+                </div>
+
+                <div class="floor03">
+                    <a href="#" class="noti">
+                        문의내역 확인하기
+                    </a>
+                    <a href="smart-manager.html" class="ask">
+                        뒤로 돌아가기
+                    </a>
+                </div>
+
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer-inner">
+                <p>주소 : 강원도 춘천시 동산면 원창리 폴리폴리 네이쳐빌리지아파트</p>
+                <p>전화번호 : 02-000-0000</p>
+                <p>email : polypoly@aisw.co.kr</p>
+            </div>
+            <p>&copy; 2025 Seoyeon. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="./js/yearPaidSelect.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Clean : 로그인</title>
+	<link rel="stylesheet" href="./style/default.css">
+	<link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="inner-wrap">
+			<div class="right-box"></div>
+
+			<div class="left-box">
+				<form action="#" method="get" name="frm">
+					<div class="login-title">
+						<h5>Login</h5>
+					</div>
+					<input type="text" name="inpId" placeholder="ID (동,호수 [예시 : 101동 902호면 101-902] )">
+					<input type="password" name="inpPw" placeholder="비밀번호">
+				
+					<input type="submit" value="로그인" onclick="return check()">
+					<!-- <input type="button" value="비밀번호 변경하기" onclick="reg()"> -->
+
+					<div class="pw-alert">
+						<p>초기 비밀번호는 1111 입니다</p>
+						<p>
+							로그인 후 반드시 초기 비밀번호를 변경하시길 바랍니다
+						</p>
+					</div>
+
+					<a href="manager-login.html">
+						관리자 프로그램 바로가기
+					</a>
+				</form>	
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>&copy; 2025 Seoyeon. All rights reserved.</p>
+	</footer>
+	
+
+
+
+
+	<script>
+		function reg(){ location.href="#"; }
+		
+		function check(){
+			
+			if(document.frm.inpId.value.length==0){
+				alert("아이디를 입력해야 합니다");
+				document.frm.inpId.focus();
+				return false;
+				// 리턴 false를 반환하면 그 이후의 동작 안됨 - 즉 제출안됨
+				// 그래서 onclick을 쓸 때 return을 한번 더 잡아줌
+			}
+			if(document.frm.inpPw.value==""){
+				alert("비밀번호를 입력해야 합니다");
+				document.frm.inpPw.focus();
+				return false;
+			}
+			
+			return true;
+			
+		}
+	</script>
+</body>
+</html>
