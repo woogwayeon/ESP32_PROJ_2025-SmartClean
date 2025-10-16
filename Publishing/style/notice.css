@@ -1,0 +1,96 @@
+.floor00{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	padding-bottom: 16px;
+}
+
+
+.notice-wrap{
+	width: 100%;
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+	background-color: #fff; 
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+}
+
+
+.notice-wrap h4{
+	font-size: 33px;
+	font-weight: 100;
+}
+
+.notice-wrap h3{
+	font-size: 16px;
+	font-weight: 700;
+	padding-bottom: 12px;
+	color: #81BE55;
+}
+
+.writing{
+    width: 95%;
+    text-align: right;
+    padding-bottom: 8px;
+}
+
+.writing:hover{
+    color:#81BE55;
+    transition: 0.6s;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    color: #555;
+}
+
+th, td {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #E3F2D8;
+}
+
+tr:hover{
+  background-color: #f2f2f2;
+  transition: 0.4s;  
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 5px;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.pagination a.active {
+    color: rgba(79, 195, 247, 1);
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+}
+
+.pagination a:hover {
+    color: rgba(79, 195, 247, 0.5);
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+}
