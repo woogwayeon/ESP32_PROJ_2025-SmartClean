@@ -1,0 +1,173 @@
+
+.wrap{
+	height: 100vh;
+}
+
+.register-inner{
+	width: 100%;
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+	background-color: #fff; 
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+}
+
+.floor00 .register-inner p{
+	text-align: left;
+}
+
+form{
+	width: auto;
+}
+
+input, select{
+	margin: 0;
+	width: 100%;
+	max-width: 360px;
+	min-height: 38px;
+	max-height: 44px;
+	margin-bottom: 7px;
+	border: none;
+	border-radius: 5px;
+}
+
+input[type = text], input[type=password],select{
+	height: 42px;
+	padding: 0 10px;
+	border: 1px solid rgba(9, 9, 9, 0.2);
+}
+
+.addr,
+.id, 
+.pw, 
+.name, 
+.mem-num, 
+.phone, 
+.rol 
+{
+	flex: 1; 
+	width: 100%;
+	display: flex;
+	/*border: 1px solid #000;*/
+	padding-bottom: 10px;
+}
+
+.addr2 .unit,
+.addr2 .unit-num,
+.phone .txt-alert, 
+.phone .inp-phone, 
+.rol .txt-alert, 
+.rol .select-role{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 5px;
+}
+
+.addr2, .inp{
+	display: flex;
+	width: 100%;
+	gap: 5px;
+}
+
+.txt-alert{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bold-color{
+	font-weight: 900;
+	color: red;
+}
+
+.id p{
+	font-size: 14px;
+	padding-bottom: 4px;
+}
+
+.phone div:nth-child(2) p{
+	display: block;
+	padding: 0 10px;
+	font-size: 25px;
+	line-height: 40px;
+}
+
+.submit-btn > input[type=submit]{
+	background-image: linear-gradient(135deg, rgba(129, 199, 132, 0.9), rgba(79, 195, 247, 0.9));
+	color: #fff;
+	width: 100%;
+	height: 40px;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+
+
+/* 미디어쿼리 */
+
+@media screen and (max-width: 768px) {
+
+	.wrap{
+		height: auto;
+	}
+
+    .id, 
+    .pw, 
+    .name, 
+    .mem-num, 
+    .rol {
+        flex-direction: column; 
+        width: 100%;
+        /*border: 1px solid #000;*/
+        padding-bottom: 20px;
+    }
+
+
+	input, select, label, p {
+	    font-size: 16px; 
+		font-weight: 500;
+		padding-bottom: 5px;
+	}
+
+	.phone .txt-alert p {
+	    font-size: 16px; 
+	 	font-weight: 500;
+	    text-align: center;
+	}
+
+    input, select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .txt-alert, .rol .select-role {
+        width: 100%;
+    }
+
+    .addr, .phone {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        padding-bottom: 20px;
+    }
+
+    .addr .unit, .addr .unit-num,
+    .phone .unit, .phone .unit-num {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        flex: 1;
+    }
+
+    .addr .unit input, .addr .unit-num input,
+    .phone .unit input, .phone .unit-num input {
+        flex: 1;
+    }
+
+}

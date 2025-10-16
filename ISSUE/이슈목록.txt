@@ -1,0 +1,39 @@
+남은 주요 이슈 (아직 안 정리된 것들)
+
+생각보다 버전관리는 빡세게 해서 버전이슈는 안생김 Java 17 + Tomcat 10.1 + MySQL 8.0
+
+1. JSP / 서버 쿼리 로직 문제
+ONLY_FULL_GROUP_BY 오류로 인한 집계 쿼리 실패
+Billing 테이블과 WasteRecord 테이블을 분리하면서 생긴 누적 합산 문제
+ON DUPLICATE KEY UPDATE 구문을 이해하는 데 시간 소요
+“총합이 2번 더해짐” 문제 → INSERT 중복 처리 및 고유키 설정으로 해결
+JSP에서 청구금액 실시간 반영이 안 됨 → 서버가 아니라 JSP단에서 계산하도록 수정
+
+2. JSP 데이터 시각화 문제
+console.warn() 등 JS 문법 혼용으로 오류 발생 → console.log()로 교체
+날짜 축 정렬이 안 됨 → GROUP BY + ORDER BY 동시 사용으로 해결
+차트 데이터 전달 시 Gson JSON 변환 누락 문제
+
+3. 서버 & 클라이언트 통신 안정성
+read() == 0 처리 안 돼서 서버가 블로킹 상태로 멈춤
+(클라이언트가 정상적으로 연결을 끊었는데, 서버가 그걸 제대로 감지하지 못하고 read()에서 계속 기다리는 상태가 됨)
+shutdown(sock, SHUT_WR)과 close() 순서 헷갈림
+SO_REUSEADDR 옵션 누락으로 포트 바인드 에러 
+> kill pid 로 될줄알았으나 서버는 꺼졌는데 포트는 살아있는 상태라 상황이 다름
+클라이언트 쪽에서 무한 재시도할수있음 > 와이파이 연결오류시 오버플로
+
+4. 빌드/배포 이슈
+.war 파일을 /usr/local/tomcat/webapps로 옮길 때 디렉터리가 아니다 에러 > 오타였음;
+SCP 경로 잘못 입력 (~/Desktop 절대경로 필요) / 권한이슈
+접근간으한 홈디렉토리에 옮기고 sudo mv 사용해야 권한 문제 해결
+Tomcat 캐시 때문에 새 .war 반영안됨 > rm -rf webapps/ROOT 후 재배포
+
+5. JSP 세션 & 로그인 문제
+User_ID 세션 끊김 > 로그인 안 된 상태로 이동 시 null 에러
+로그인 후 사용자 페이지(smart-user.jsp) 이동 시 session.setAttribute() 누락
+
+6. 기타 사소하지만 실제로 시간 잡아먹은 부분
+ESP32 포트 인식 안 됨 (/dev/cu.usbserial-1130 확인 실패)
+Face ID 때문에 터미널 건드렸다가 컴퓨터 난리남 하...
+아크릴판 절단 후 고정 불안정 → 글루건으로 고정 위치 수정
+MySQL 비밀번호 커밋 위험 때문에 .gitignore 처리

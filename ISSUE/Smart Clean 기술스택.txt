@@ -1,0 +1,28 @@
+💡 Smart Clean 프로젝트 기술 흐름 정리
+	1.	ESP32 (센서단)
+	•	HX711 로드셀로 실시간 음식물 무게 측정
+	•	초음파센서로 개폐 감지
+	•	Wi-Fi 연결 → TCP 송신(House_ID@Amount 형식)
+
+	2.	C 기반 TCP 서버 (라즈베리파이)
+	•	다중 클라이언트 수신 가능
+	•	수신 데이터 파싱(strtok 이용)
+	•	MySQL에 WasteRecord insert
+	•	Billing 누적(ON DUPLICATE KEY UPDATE) 로직
+	•	우아한 종료(shutdown() / close())
+
+	3.	MySQL DB
+	•	House, WasteRecord, Billing 테이블 구조
+	•	House_ID 외래키로 연동
+	•	(House_ID, Period) 복합 UNIQUE KEY 적용
+
+	4.	JSP 웹 대시보드
+	•	smart-user.jsp: 사용자별 폐기량, 청구액 시각화
+	•	Chart.js로 7일/6개월 그래프
+	•	Billing 미납/납부 상태 표시
+	•	DB 연동 및 JSON 데이터 전달 (Gson 활용)
+
+	5.	기술 보완 요소
+	•	연결리스트 사용 (데이터 파싱 및 구조화)
+	•	우아한 통신 종료 및 자동 복구
+	•	JSP에서 동적 요금 계산 및 렌더링
