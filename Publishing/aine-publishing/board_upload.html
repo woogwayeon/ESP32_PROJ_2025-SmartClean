@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Clean : 관리자 공지사항</title>
+	<link rel="stylesheet" href="./style/default.css">
+	<link rel="stylesheet" href="./style/detailPage.css">
+	<link rel="stylesheet" href="./style/notice.css">
+	<link rel="stylesheet" href="./style/board_upload.css">
+
+</head>
+<body>
+
+	<div class="wrap">
+		<div>
+			<h1>Smart Clean System</h1>	
+			<div class="logout">
+				<a href="register-changeInfo-user.html">비밀번호 변경</a>
+			</div>
+			<div class="logout">
+				<a href="index.html">Logout</a>
+			</div>
+		</div>
+		<div class="inner-wrap">
+			<!-- <h1>Smart Clean System</h1> -->
+			<header>
+				<h2>폴리폴리 네이쳐빌리지 아파트</h2>
+				<p>관리자님 안녕하세요!</p>
+			</header>
+
+			<main>
+
+			<div class="floor00">
+				<article class="register-inner">
+					<h4>글작성 페이지</h4>
+					<form method="get" action="#">
+						
+						<div class="title"> 
+							<div class="txt-alert">
+								<p>
+									제목
+								</p>
+							</div>
+							<div class="inp">
+								<input type="text" name="title" placeholder="제목" >
+							</div>
+						</div>
+
+						<div class="file">
+							<div class="txt-alert">
+								<p>
+									첨부파일
+								</p>
+								<p>
+									(JPG, PNG, PDF ...)
+								</p>
+							</div>
+							<div class="inp">
+								<input type="file" name="file" placeholder="첨부파일" >
+							</div>
+						</div>
+
+
+
+						<div class="text">
+							<div class="txt-alert">
+								<p>내용</p>
+							</div>
+							<div class="inp">
+								<input type="text" name="txt" placeholder="내용">
+							</div>
+						</div>
+
+						<div class="submit-btn">
+							<input type="submit" value="등록하기">
+						</div>
+					</form>
+				</article>
+
+			</div>
+				
+				
+				<div class="floor03">
+					<a href="smart-manager.html" class="noti">
+						뒤로가기
+					</a>
+					<a href="#" class="ask">
+						우리 아파트 게시판
+					</a>
+				</div>
+
+			</main>
+		</div>
+
+		<footer>
+			<div class="footer-inner">
+				<p>
+					주소 : 강원도 춘천시 동산면 원창리 폴리폴리 네이쳐빌리지아파트
+				</p>
+				<p>
+					전화번호 : 02-000-0000
+				</p>
+				<p>
+					email : polypoly@aisw.co.kr
+				</p>
+			</div>
+			<p>&copy; 2025 Seoyeon. All rights reserved.</p>
+		</footer>
+	</div>
+	
+	<!-- Chart.js 라이브러리 -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!-- 외부 JS 연결 -->
+	<script src="./js/detailChart.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+
+.register-inner{
+	width: 100%;
+    /* max-width: 1100px; */
+	border-radius: 20px;
+	padding: 2% ; /* 상 우 하 좌 */
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+	background-color: #fff; 
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);	
+    /* border: 1px solid red; */
+}
+
+.floor00 .register-inner p{
+	text-align: left;
+    /* border: 1px solid blue; */
+}
+
+form{
+	width: 100%;
+    /* height: 100%; */
+    padding: 3% 10% 2% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    /* border: 1px solid blue; */
+}
+
+form div div{
+	width: 100%;
+}
+/* .submit-btn{
+	display: flex;
+    gap: 5%;
+} */
+input, select{
+	margin: 0;
+	width: 100%;
+	/* max-width: 360px; */
+	min-height: 38px;
+	/* max-height: 44px; */
+	margin-bottom: 7px;
+	border: none;
+	border-radius: 5px;
+
+}
+
+input{
+	height: 100%;
+	padding: 0 10px;
+    /* width: 360px; */
+	border: 1px solid rgba(9, 9, 9, 0.2);
+    /* border: 1px solid red; */
+}
+
+.title,
+.file, 
+.pw, 
+.text, 
+.mem-num, 
+.phone, 
+.rol 
+{
+	flex: 1; 
+	width: 100%;
+	display: flex;
+	padding-bottom: 10px;
+    /* border: 1px solid green; */
+}
+.text .inp {
+    height: 300px;
+}
+.text p, .text input{
+    /* border: 1px solid #000; */
+    /* line-height: 300px; */
+    align-items: flex-start;
+}
+/* .title2 .unit,
+.title2 .unit-num,
+.phone .txt-alert, 
+.phone .inp-phone, 
+.rol .txt-alert, 
+.rol .select-role{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 5px;
+    border: 1px solid yellow;
+
+} */
+
+/* .title2, .inp{
+	display: flex;
+	width: 100%;
+	gap: 5px;
+    border: 1px solid #000;
+
+} */
+
+.wrap div:first-child .txt-alert{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+	/* align-items: center; */
+    /* border: 1px solid blue; */
+}
+
+.file .txt-alert p:last-child{
+    /* border: 1px solid red; */
+    font-size: 10px;
+    color: #5a5a5a;
+}
+
+.file .inp input{
+    /* line-height: 42px; */
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    /* align-items: center; */
+}
+.file .inp input::file-selector-button {
+        display: none;
+      }
+
+.bold-color{
+	font-weight: 900;
+	color: red;
+}
+
+
+.submit-btn > input[type=submit]{
+	background-image: linear-gradient(135deg, rgba(129, 199, 132, 0.9), rgba(79, 195, 247, 0.9));
+	color: #fff;
+	width: 100%;
+    max-width: 60%;
+	height: 40px;
+	font-weight: 600;
+	font-size: 14px;
+    margin: 2% 0% 0% 0%;
+    border: none;
+   
+}
+
+
+
+/* 미디어쿼리 */
+
+@media screen and (max-width: 768px) {
+
+	.wrap{
+		height: auto;
+	}
+
+    .file, 
+    .pw, 
+    .text, 
+    .mem-num, 
+    .year-total,
+    .rol {
+        flex-direction: column; 
+        width: 100%;
+        /*border: 1px solid #000;*/
+        padding-bottom: 20px;
+    }
+
+
+	input, select, label, p {
+	    font-size: 16px; 
+		font-weight: 500;
+		padding-bottom: 5px;
+	}
+
+
+    input, select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .txt-alert, .rol .select-role {
+        width: 100%;
+    }
+
+    .title, .phone {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        padding-bottom: 20px;
+    }
+
+    .title .unit, .title .unit-num,
+    .phone .unit, .phone .unit-num {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        flex: 1;
+    }
+
+    .title .unit input, .title .unit-num input,
+    .phone .unit input, .phone .unit-num input {
+        flex: 1;
+    }
+
+}
