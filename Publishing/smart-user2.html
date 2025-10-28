@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Clean : 상세보기</title>
+	<link rel="stylesheet" href="./style/default.css">
+	<link rel="stylesheet" href="./style/detailPage.css">
+</head>
+<body>
+
+	<div class="wrap">
+		<div>
+			<h1>Smart Clean System</h1>	
+			<div class="logout">
+				<a href="register-changeInfo-user.html">비밀번호 변경</a>
+			</div>
+			<div class="logout">
+				<a href="index.html">Logout</a>
+			</div>
+		</div>
+		<div class="inner-wrap">
+			<!-- <h1>Smart Clean System</h1> -->
+			<header>
+				<h2>폴리폴리 네이쳐빌리지 아파트</h2>
+				<p>101동 101호</p>
+			</header>
+
+			<main>
+
+				<div class="floor00">
+					
+					<article class="today-date">
+						<h4>2025년</h4>
+						<h3>10월 06일(월)</h3>
+					</article>
+
+					<article class="today-total">
+						<h4>오늘의 폐기량</h4>
+						<h3>0g</h3>
+					</article>
+
+					<article class="today-bill">
+						<h4>이번달 누적 청구액</h4>
+						<h3>1,200원</h3>
+					</article>
+
+				</div>
+				
+				<div class="floor01">
+					
+					<article class="month-bill">
+						<!-- <h4>
+							<%= 9 %>월 청구금액
+						</h4>
+						<h3 class="month-pay">
+							<%= 3,300 %>원
+						</h3> -->
+						<p class="paid-check">납부완료</p>
+						<h4>
+							9월 청구금액
+						</h4>
+						<h3 class="month-pay">
+							3,300원
+						</h3>
+						<div class="paid-lim">
+							<p>납부 마감일</p>
+							<p>2025-11-24</p>
+						</div>
+						<button>
+							<a href="paidCheck-user.html">
+								우리집 납부내역 확인
+							</a>
+						</button>
+					</article>
+					
+					<article class="week-bill">
+						<div class="week-chart">
+							<canvas id="weekChart"></canvas>
+						</div>
+					</article>
+
+				</div>
+				
+				<div class="floor02">
+					
+					<article class="cumul">
+						
+						<div class="amount">
+							<h4>현재 누적 폐기량</h4>
+							<h3>300g</h3>
+							<!-- <h3><=% 300 %>g</h3> -->
+						</div>
+
+						<div class="billing">
+							<h4>우리집은 음식물 폐기량</h4>
+							<h3>상위 13%</h3>
+							<!-- <h3><=% 1,200 %>원</h3> -->
+							<p>환경 보호에 앞장서고 있어요!</p>
+						</div>
+						
+					</article>
+
+					<article class="month-total">
+						<div class="month-chart">
+							<canvas id="monthChart"></canvas>
+						</div>
+					</article>
+				</div>
+
+				<div class="floor03">
+					<a href="notice-user.html" class="noti">
+						관리사무소에서 알립니다!
+					</a>
+					<a href="#" class="ask">
+						문의하기
+					</a>
+				</div>
+
+			</main>
+		</div>
+
+		<footer>
+			<div class="footer-inner">
+				<p>
+					주소 : 강원도 춘천시 동산면 원창리 폴리폴리 네이쳐빌리지아파트
+				</p>
+				<p>
+					전화번호 : 02-000-0000
+				</p>
+				<p>
+					email : polypoly@aisw.co.kr
+				</p>
+			</div>
+			<p>&copy; 2025 Seoyeon. All rights reserved.</p>
+		</footer>
+	</div>
+	
+	<!-- Chart.js 라이브러리 -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!-- 외부 JS 연결 -->
+	<script src="./js/detailChart.js"></script>
+</body>
+</html>
