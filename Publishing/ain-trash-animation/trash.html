@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쓰레기통 모니터링</title>
+  <link rel="stylesheet" href="trash.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="header">
+        <h1>쓰레기통 모니터링</h1>
+        <p>버튼을 클릭해서 쓰레기를 넣어보세요</p>
+      </div>
+
+      <div class="trash-can-wrapper">
+        <!-- Falling trash items container -->
+        <div id="fallingTrashContainer"></div>
+
+        <svg class="odor-lines" id="odorLines" width="80" height="60" viewBox="0 0 80 60">
+          <path d="M 20 50 Q 20 30, 25 20" stroke="#9ca3af" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 40 50 Q 40 25, 45 10" stroke="#9ca3af" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 60 50 Q 60 30, 55 20" stroke="#9ca3af" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+
+        <div class="trash-can-container">
+          <!-- 뚜껑 -->
+          <div id="trashLid" class="trash-lid">
+            <div class="lid-handle"></div>
+            <!-- 연기 -->
+            <div id="odorLines" class="odor-lines" style="display: none;">
+              <div class="odor-line odor-line-1"></div>
+              <div class="odor-line odor-line-2"></div>
+            </div>
+          </div>
+
+          <!-- 몸체 -->
+          <div id="trashCan" class="trash-can">
+            <!-- Vertical lines -->
+            <div class="trash-logo"></div>
+            <div class="vertical-line left"></div>
+            <div class="vertical-line right"></div>
+
+            <!-- 채워진 요소 -->
+            <div id="fillLevel" class="fill-level">
+              <!-- Wavy top surface -->
+              <svg class="wave-surface" height="10" viewBox="0 0 200 10" preserveAspectRatio="none">
+                <path d="M0,5 Q25,2 50,5 T100,5 T150,5 T200,5 L200,10 L0,10 Z" fill="#cbd5e1" />
+              </svg>
+              <!-- Trash particles -->
+              <div id="trashParticles"></div>
+            </div>
+
+            <!-- 채워진양 n% -->
+            <div class="percentage-display">
+              <div id="percentageText">0</div>
+              <span>g</span>
+            </div>
+          </div>
+
+          <!-- Warning icon -->
+          <div id="warningIcon" class="warning-icon" style="display: none;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="3">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            </svg>
+            <div class="warning-exclamation">!</div>
+          </div>
+
+          <!-- Shake lines -->
+          <div id="shakeLines" class="shake-lines" style="display: none;">
+            <div class="shake-line-group left">
+              <div class="shake-line"></div>
+              <div class="shake-line"></div>
+              <div class="shake-line"></div>
+            </div>
+            <div class="shake-line-group right">
+              <div class="shake-line"></div>
+              <div class="shake-line"></div>
+              <div class="shake-line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <button id="fillButton" class="btn btn-primary">
+          <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2 mr-2 h-5 w-5">
+            <path d="M3 6h18"></path>
+            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+            <line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line>
+          </svg>
+          쓰레기 넣기
+        </button>
+        <button id="emptyButton" class="btn btn-secondary">
+          쓰레기통 비우기
+        </button>
+      </div>
+
+      <!-- Status text -->
+      <div id="statusText" class="status-text">
+        남은 용량: 100%
+      </div>
+      
+    <div class="status">
+      <div class="status-item">
+        <span class="status-label">현재 용량</span>
+        <span class="status-value" id="fillLevel">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="status-item">
+        <span class="status-label">상태</span>
+        <span class="status-value" id="statusText">정상</span>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <script src="trash_script.js"></script>
+</body>
+</html>
