@@ -101,8 +101,11 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 | **House** | 세대 정보 (ID, 이름, 주소 등) |
 | **WasteRecord** | 날짜별 배출 내역 기록 |
 | **Billing** | 청구 금액 및 납부 현황 관리 |
+| **Notice** | 공지사항 게시판 (제목, 내용, 작성자, 등록일 등) |
+| **Inquiry** | 1:1 문의 게시판 (작성자, 문의내용, 답변상태 등) |
 
 > 모든 테이블은 **House_ID**를 외래키(Foreign Key)로 공유합니다.
+> Notice와 Inquiry 테이블은 **ROLE(관리자/사용자)** 접근 권한에 따라 구분 표시됩니다.
 
 <br /><br /><br />
 
