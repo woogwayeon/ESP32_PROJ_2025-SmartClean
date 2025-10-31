@@ -39,6 +39,8 @@
 
 ## 🧩 시스템 구성도
 
+![시스템 구성도](./images/system_diagram.jpg)
+
 ESP32 → Linux Server → MariaDB → JSP(Web)
 
 - **ESP32**: 센서 데이터 수집 및 송신  
@@ -48,6 +50,8 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 <br /><br /><br />
 
 ## 🔄 전체 동작 플로우
+
+![플로우 차트](./images/flow.png)
 
 1. ESP32가 초음파 센서로 뚜껑 열림 상태 감지  
 2. 일정 시간 후 로드셀로 음식물 무게 측정  
@@ -89,6 +93,8 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 <br /><br /><br />
 
 ## 🗄️ 데이터베이스 구조
+
+![ERD](./images/erd.png)
 
 | 테이블명 | 설명 |
 |-----------|------|
