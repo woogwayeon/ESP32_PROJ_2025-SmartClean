@@ -145,4 +145,5 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 
 ## 🧾 License
 
-© 2025. 고서연. All Rights Reserved.
+© 2025. woogwayeon. All Rights Reserved.
+
