@@ -55,8 +55,8 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 
 1. ESP32가 초음파 센서로 뚜껑 열림 상태 감지  
 2. 일정 시간 후 로드셀로 음식물 무게 측정  
-3. 측정 데이터(`세대ID@배출량`)를 TCP/IP로 Linux 서버에 전송  
-4. Linux Server가 수신 후 데이터 파싱 및 DB Insert  
+3. 측정 데이터(` 세대ID @ 배출량 `)를 LinkedList 자료구조 형태로 Linux 서버에 전송  
+4. Linux Server와 Client는 TCP/IP를 통해 통신 후 데이터 파싱 및 DB Insert  
 5. Billing 테이블에서 세대별 청구금액 자동 업데이트  
 6. JSP 웹페이지에서 DB 조회 → 실시간 시각화 및 CRUD 기능 제공
 
