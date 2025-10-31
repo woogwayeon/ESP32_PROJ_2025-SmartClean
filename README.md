@@ -11,7 +11,7 @@
 |------|------|
 | **프로젝트명** | 비워요! 스마트클린 |
 | **수행기간** | 2025.09 ~ 2025.10 |
-| **작성자** | 고서연 |
+| **참여인원** | 고서연, 구아인, 조정근 |
 | **주요역할** | Web(JSP) + Linux Server + ESP32 IoT 기기 통합 구현 |
 | **목표** | IoT와 무선 네트워크(TCP/IP) 기반 융복합 플랫폼 구축으로 사용자 편의성 극대화 |
 
@@ -112,6 +112,9 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 |------|------|
 | **GitHub Repository** | https://github.com/woogwayeon/ESP32_PROJ_2025-SmartClean |
 | **개발 문서 관리** | https://docs.google.com/document/d/e/2PACX-1vRxjcA6kQyuZDT82PdVcreavuCDWfHQ5tX1u9FsmwcUdFCC4Syxoof0yQPlA2-Xc9SLnSEmZZVWgXvk/pub |
+| **고서연** | woogwayeon@gmail.com |
+| **구아인** | gooaine123@gmail.com |
+| **조정근** | @gmail.com |
 
 <br /><br /><br />
 
