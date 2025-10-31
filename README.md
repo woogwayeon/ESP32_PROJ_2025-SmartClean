@@ -139,7 +139,7 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 | **개발 문서 관리** | https://docs.google.com/document/d/e/2PACX-1vRxjcA6kQyuZDT82PdVcreavuCDWfHQ5tX1u9FsmwcUdFCC4Syxoof0yQPlA2-Xc9SLnSEmZZVWgXvk/pub |
 | **고서연** | woogwayeon@gmail.com |
 | **구아인** | gooaine123@gmail.com |
-| **조정근** | @gmail.com |
+| **조정근** | zmsdkdl98@gmail.com |
 
 <br /><br /><br />
 
