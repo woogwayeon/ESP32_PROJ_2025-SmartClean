@@ -121,13 +121,11 @@ ESP32 → Linux Server → MariaDB → JSP(Web)
 |------------------------------------------|---------------------------------------------|
 | 로그인 화면 | 메인 대시보드 |
 | ![회원등록](./images/register.png) | ![회원조회](./images/user-list.png) |
-| 회원 등록 | 회원 조회 |
-| ![공지사항](./images/notice.png) | ![문의 게시판](./images/ui_inquiry.png) |
-| 공지사항 | 1:1 문의 |
+| 신규 세대 등록 | 회원 목록 조회 |
+| ![공지사항](./images/notice.png) | ![납부내역 조회](./images/paid.png) |
+| 공지사항 | 납부내역 확인 |
 | ![공지사항 작성](./images/write.png) | ![공지사항 읽기](./images/read.png) |
 | 공지사항 작성하기 | 공지사항 읽기 |
-| ![관리자 등록 화면](./images/ui_register_house.png) | ![통계 차트](./images/ui_chart.png) |
-| 신규 세대 등록 | Chart.js 통계 시각화 |
 
 <br />
 
