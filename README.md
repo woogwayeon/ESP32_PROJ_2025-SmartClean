@@ -11,6 +11,12 @@
 
 <br /><br /><br />
 
+## 🎥 시연 영상
+
+[([https://www.youtube.com/watch?v=4QpFgg6l7Vk](https://www.youtube.com/watch?v=4QpFgg6l7Vk)]
+
+<br /><br /><br />
+
 ## 📅 프로젝트 개요
 
 | 항목 | 내용 |
