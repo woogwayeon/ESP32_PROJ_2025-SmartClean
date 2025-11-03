@@ -13,7 +13,9 @@
 
 ## 🎥 시연 영상
 
-[([https://www.youtube.com/watch?v=4QpFgg6l7Vk](https://www.youtube.com/watch?v=4QpFgg6l7Vk)]
+[![스마트클린 시연 영상](https://img.youtube.com/vi/4QpFgg6l7Vk/0.jpg)](https://www.youtube.com/watch?v=4QpFgg6l7Vk)
+
+> 클릭하면 유튜브에서 전체 시연 영상을 시청할 수 있습니다.
 
 <br /><br /><br />
 
